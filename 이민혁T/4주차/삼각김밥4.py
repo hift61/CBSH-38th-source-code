@@ -1,14 +1,11 @@
 N = int(input())
 
-re = 0
-if N >= 3:
-    for c in range(N // 3, N // 2 + 1):
-        for b in range(1, c + 1):
-            a = N - b - c
+cnt = 0
+for c in range(N // 3, (N - 1) // 2 + 1):
+    min_a = max(1, N - 2 * c)
+    max_a = (N - c) // 2
 
-            if 1 <= a <= b <= c:
-                re += 1
+    if min_a <= max_a:
+        cnt += max_a - min_a + 1
 
-    print(re)
-else:
-    print(0)
+print(cnt)
