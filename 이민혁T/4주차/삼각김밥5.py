@@ -8,7 +8,7 @@ max = (N - 1) // 2
 ans = 0
 if min > max: print(ans)
 else:
-  tmp = (sum((N - min - 1) // 2) - sum(((N - max - 1) // 2 - 1)) * 2)
+  tmp = (sum((N - min - 1) // 2) - sum(((N - max - 1) // 2 - 1))) * 2
   
   if (N - max - 1) % 2 == 1: tmp -= (N - max - 1) // 2
   if (N - min - 1) % 2 == 0: tmp -= (N - min - 1) // 2
